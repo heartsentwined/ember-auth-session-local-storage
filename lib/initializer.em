@@ -1,6 +1,6 @@
 Em.onLoad 'Ember.Application', (application) ->
   application.initializer
-    name: 'ember-auth-session-local-storage'
+    name: 'ember-auth.session.local-storage'
     after: 'ember-auth'
 
     initialize: (container, app) ->
