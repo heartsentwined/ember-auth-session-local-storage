@@ -5,3 +5,4 @@ Em.onLoad 'Ember.Application', (application) ->
 
     initialize: (container, app) ->
       app.register 'authSession:localStorage', Em.Auth.LocalStorageAuthSession
+      app.inject 'authSession:localStorage', 'auth', 'auth:main'
