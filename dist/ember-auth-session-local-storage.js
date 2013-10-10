@@ -3,7 +3,7 @@ var get$ = Ember.get;
 Em.onLoad('Ember.Application', function (application) {
   return application.initializer({
     name: 'ember-auth.session.local-storage',
-    after: 'ember-auth',
+    before: 'ember-auth-load',
     initialize: function (container, app) {
       return app.register('authSession:localStorage', get$(get$(Em, 'Auth'), 'LocalStorageAuthSession'));
     }
