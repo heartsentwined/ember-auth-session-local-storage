@@ -4,5 +4,6 @@ Em.onLoad 'Ember.Application', (application) ->
     before: 'ember-auth-load'
 
     initialize: (container, app) ->
-      app.register 'authSession:localStorage', Em.Auth.LocalStorageAuthSession
+      app.register 'authSession:localStorage', Em.Auth.LocalStorageAuthSession, \
+      { singleton: true }
       app.inject 'authSession:localStorage', 'auth', 'auth:main'
