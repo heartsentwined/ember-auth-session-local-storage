@@ -12,3 +12,8 @@ Store session data in `localStorage`.
 App.Auth = Em.Auth.extend
   session: 'localStorage'
 ```
+
+License
+=======
+
+MIT
